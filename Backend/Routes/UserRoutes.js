@@ -3,8 +3,7 @@ import {check,validationResult} from "express-validator";
 const UserRouter = Router();
 import bcrypt from "bcrypt";
 import UserSchema from "../Models/User.js"
-import { v4 as uuidv4 } from 'uuid';
-
+// import { UUID } from "Realm.BSON";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import auth from "../Middleware/auth.js";
@@ -15,6 +14,7 @@ const realm = await Realm.open({
   schema: [UserSchema],
   path: "testDatabase",
 });
+const { UUID } = Realm.BSON;
 
 //signup page post routes
 UserRouter.post('/signup',[
@@ -56,7 +56,7 @@ UserRouter.post('/signup',[
         
     realm.write(() => {
         user = realm.create("UserSchema", {
-            _id:uuidv4(),
+            _id:new UUID(),
             name: name,
             gender: gender,
             email: email,
