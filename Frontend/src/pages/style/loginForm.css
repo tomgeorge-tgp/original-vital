@@ -1,0 +1,197 @@
+.loginexisting-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .loginexisting-container1 {
+    top: 0px;
+    flex: 0 0 auto;
+    left: 0px;
+    right: 0px;
+    width: 1025px;
+    bottom: 0px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    border-color: rgba(158, 0, 0, 0);
+    border-width: 1px;
+    align-content: center;
+    justify-content: flex-start;
+  }
+  .loginexisting-container2 {
+    top: 0px;
+    flex: 0 0 auto;
+    left: 0px;
+    width: 1024px;
+    height: 32px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    background-color: #393939;
+  }
+  .loginexisting-input {
+    top: 212px;
+    left: 377px;
+    color: #125873;
+    width: 238px;
+    bottom: 348px;
+    height: 40px;
+    position: absolute;
+    border-color: #92b3c0;
+    border-width: 2px;
+    border-radius: 10px;
+  }
+  .loginexisting-text {
+    top: 64px;
+    left: 71px;
+    color: rgb(18, 88, 115);
+    width: 194px;
+    height: 19px;
+    position: absolute;
+    font-size: 20px;
+    font-family: Manrope;
+    line-height: 19px;
+  }
+  .loginexisting-text1 {
+    top: 185px;
+    left: 379.27px;
+    color: rgb(18, 88, 115);
+    width: 91px;
+    height: 19px;
+    position: absolute;
+    font-size: 14px;
+    font-family: Manrope;
+    line-height: 19px;
+  }
+  .loginexisting-text2 {
+    top: 123px;
+    left: 459px;
+    color: rgb(147, 147, 147);
+    right: -131px;
+    width: 106px;
+    bottom: -135px;
+    height: 22px;
+    position: absolute;
+    font-size: 16px;
+    font-family: Manrope;
+    line-height: 21.86px;
+  }
+  .loginexisting-text3 {
+    top: 123px;
+    left: 377px;
+    color: rgb(147, 147, 147);
+    right: -567px;
+    width: 373px;
+    position: absolute;
+    line-height: 22px;
+  }
+  .loginexisting-text4 {
+    top: 324px;
+    left: 407px;
+    color: #939393;
+    width: 190px;
+    height: 22px;
+    position: absolute;
+    font-family: Manrope;
+    line-height: 22px;
+  }
+  .loginexisting-button {
+    top: 371px;
+    left: 129px;
+    color: rgb(18, 88, 115);
+    width: 238px;
+    height: 56px;
+    display: flex;
+    position: absolute;
+    font-size: 14px;
+    box-shadow: 0px 10px 20px 0px rgba(158, 158, 158, 0.16);
+    align-items: center;
+    font-family: Manrope;
+    line-height: 19px;
+    padding-top: 19px;
+    border-color: rgba(158, 158, 158, 0.16);
+    padding-left: 48px;
+    border-radius: 8px;
+    padding-right: 48px;
+    padding-bottom: 18px;
+  }
+  .loginexisting-button1 {
+    top: 371px;
+    left: 646px;
+    color: rgb(18, 88, 115);
+    width: 238px;
+    height: 56px;
+    display: flex;
+    position: absolute;
+    font-size: 14px;
+    box-shadow: 0px 10px 20px 0px rgba(158, 158, 158, 0.16);
+    align-items: center;
+    font-family: Manrope;
+    line-height: 19px;
+    padding-top: 19px;
+    border-color: rgba(158, 158, 158, 0.16);
+    padding-left: 48px;
+    border-radius: 8px;
+    padding-bottom: 18px;
+  }
+  .loginexisting-button2 {
+    top: 371px;
+    left: 390px;
+    color: rgb(18, 88, 115);
+    width: 238px;
+    height: 56px;
+    display: flex;
+    position: absolute;
+    font-size: 14px;
+    box-shadow: 0px 10px 20px 0px rgba(158, 158, 158, 0.16);
+    align-items: center;
+    font-family: Manrope;
+    line-height: 19px;
+    padding-top: 19px;
+    border-color: rgba(158, 158, 158, 0.16);
+    padding-left: 48px;
+    border-radius: 8px;
+    padding-bottom: 18px;
+  }
+  .loginexisting-button3 {
+    top: 473px;
+    left: 389px;
+    color: rgb(255, 255, 255);
+    width: 245px;
+    bottom: -96px;
+    height: 50px;
+    display: flex;
+    position: absolute;
+    padding-top: 15px;
+    padding-left: 83px;
+    align-content: center;
+    border-radius: 10px;
+    padding-right: 70px;
+    padding-bottom: 15px;
+    background-color: rgb(18, 88, 115);
+  }
+  .loginexisting-html-node {
+    top: 392px;
+    left: 150px;
+    position: absolute;
+  }
+  .loginexisting-html-node1 {
+    top: 394px;
+    left: 410px;
+    position: absolute;
+  }
+  .loginexisting-html-node2 {
+    top: 393px;
+    left: 665px;
+    position: absolute;
+  }
+  .loginexisting-html-node3 {
+    top: 64px;
+    left: 40px;
+    position: absolute;
+  }

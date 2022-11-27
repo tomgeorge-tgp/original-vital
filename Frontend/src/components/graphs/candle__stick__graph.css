@@ -1,0 +1,27 @@
+/* .candle__graph{
+    height: 250px;
+    width: 400px;
+} */
+
+.candle__stick{
+ 
+       
+        position: relative;
+        
+        min-width: 950px;
+        height: 250px;
+        width: 100%;
+        
+}
+
+
+.line__graph{
+
+        z-index: 99; 
+        position: absolute;
+        /* margin-top:50px;
+        min-width: 950px;
+        height: 250px;
+        width: 100%;
+        bottom: 2px; */
+}

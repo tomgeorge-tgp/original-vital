@@ -1,0 +1,36 @@
+
+
+.card
+{
+    width: 13rem;
+    height: 10rem;
+    background-color: #125873;
+    border-radius: 1.25rem;
+    margin: 1rem;  
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);  
+}
+.card__button{
+    background-color:transparent;
+
+}
+
+.card__img{
+height: 50px;
+width: 50px;
+margin:1rem;
+position: relative;
+left: 7.5rem;
+opacity: 70%;
+}
+
+.Name{
+  
+   padding-left: 1rem;
+    color: #DAEBF1;
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: left;
+    
+}
+

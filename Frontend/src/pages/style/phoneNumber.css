@@ -1,0 +1,269 @@
+.ph-number-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .ph-number-container1 {
+    top: 0px;
+    flex: 0 0 auto;
+    left: 0px;
+    right: 0px;
+    width: 1024px;
+    bottom: 0px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: rgba(158, 0, 0, 0);
+    border-width: 1px;
+    align-content: center;
+    justify-content: flex-start;
+  }
+  .ph-number-container2 {
+    top: 0px;
+    flex: 0 0 auto;
+    left: 0px;
+    width: 1024px;
+    height: 32px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    background-color: #393939;
+  }
+  .ph-number-container3 {
+    top: 298px;
+    flex: 0 0 auto;
+    left: 377px;
+    width: auto;
+    border: 2px dashed rgba(120, 120, 120, 0.4);
+    height: auto;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+  }
+  .ph-number-button {
+    top: 389px;
+    left: 379px;
+    color: rgb(18, 88, 115);
+    width: 90px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #125873;
+    border-radius: 0px;
+    justify-content: center;
+    background-color: Button;
+    border-bottom-left-radius: 10px;
+  }
+  .ph-number-button01 {
+    top: 335px;
+    left: 379px;
+    color: #125873;
+    width: 90px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #125873;
+    border-radius: 0px;
+    justify-content: center;
+    background-color: Button;
+  }
+  .ph-number-button02 {
+    top: 282px;
+    left: 379px;
+    color: #125873;
+    width: 90px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #125873;
+    border-radius: 0px;
+    justify-content: center;
+    background-color: Button;
+  }
+  .ph-number-button03 {
+    top: 228px;
+    left: 379px;
+    color: #125873;
+    width: 90px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #125873;
+    border-radius: 0px;
+    justify-content: center;
+    background-color: Button;
+    border-top-left-radius: 10px;
+  }
+  .ph-number-button04 {
+    top: 389px;
+    left: 467px;
+    color: #125873;
+    width: 90px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #125873;
+    border-radius: 0px;
+    justify-content: center;
+    background-color: Button;
+  }
+  .ph-number-button05 {
+    top: 335px;
+    left: 467px;
+    color: #125873;
+    width: 90px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #125873;
+    border-radius: 0px;
+    justify-content: center;
+    background-color: Button;
+  }
+  .ph-number-button06 {
+    top: 282px;
+    left: 467px;
+    color: #125873;
+    width: 90px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #125873;
+    border-radius: 0px;
+    justify-content: center;
+    background-color: Button;
+  }
+  .ph-number-button07 {
+    top: 228px;
+    left: 467px;
+    color: #125873;
+    width: 90px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #125873;
+    border-radius: 0px;
+    justify-content: center;
+    background-color: Button;
+  }
+  .ph-number-button08 {
+    top: 389px;
+    color: rgb(18, 88, 115);
+    right: 377px;
+    width: 90px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #125873;
+    border-radius: 0px;
+    justify-content: center;
+    background-color: Button;
+    border-bottom-right-radius: 10px;
+  }
+  .ph-number-button09 {
+    top: 335px;
+    color: #125873;
+    right: 377px;
+    width: 90px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #125873;
+    border-radius: 0px;
+    justify-content: center;
+    background-color: Button;
+  }
+  .ph-number-button10 {
+    top: 282px;
+    color: #125873;
+    right: 377px;
+    width: 90px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #125873;
+    border-radius: 0px;
+    justify-content: center;
+    background-color: Button;
+  }
+  .ph-number-button11 {
+    top: 228px;
+    color: #125873;
+    right: 377px;
+    width: 90px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #125873;
+    border-radius: 0px;
+    justify-content: center;
+    background-color: Button;
+    border-top-right-radius: 10px;
+  }
+  .ph-number-text {
+    top: 172px;
+    left: 386px;
+    color: rgb(18, 88, 115);
+    width: 250px;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    font-size: 16px;
+    align-items: center;
+    font-family: Manrope;
+    line-height: 21.86px;
+    border-color: var(--dl-color-gray-black);
+    border-width: 1px;
+    border-radius: 20px;
+    justify-content: center;
+  }
+  .ph-number-button12 {
+    top: 473px;
+    left: 389px;
+    color: rgb(255, 255, 255);
+    width: 245px;
+    bottom: -96px;
+    height: 50px;
+    display: flex;
+    position: absolute;
+    box-shadow: 0px 10px 20px 0px #d4d4d4;
+    align-items: center;
+    padding-top: 15px;
+    border-width: 0px;
+    padding-left: 83px;
+    align-content: center;
+    border-radius: 10px;
+    padding-right: 70px;
+    padding-bottom: 15px;
+    justify-content: flex-start;
+    background-color: rgb(18, 88, 115);
+  }
+  .ph-number-text1 {
+    top: 118px;
+    left: 373px;
+    color: #939393;
+    position: absolute;
+  }
+  .ph-number-html-node {
+    top: 412px;
+    left: 589px;
+    position: absolute;
+  }

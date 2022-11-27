@@ -1,0 +1,85 @@
+
+    .stepcard-container {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      position: relative;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .stepcard-container1 {
+      flex: 0 0 auto;
+      width: 563px;
+      height: 327px;
+      display: flex;
+      position: relative;
+      align-items: flex-end;
+      border-radius: 16px;
+      flex-direction: row;
+      justify-content: center;
+      background-color: #ffffff;
+    }
+    .stepcard-text {
+      top: 34px;
+      left: 38px;
+      color: #125873;
+      bottom: 154px;
+      height: 22px;
+      position: absolute;
+    }
+    .stepcard-text1 {
+      top: 82px;
+      left: 38px;
+      width: 220px;
+      height: 152px;
+      position: absolute;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+    }
+    .stepcard-image {
+      top: 34px;
+      left: 323px;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      object-fit: cover;
+    }
+    .stepcard-html-node {
+      left: 348px;
+      bottom: 35px;
+      position: absolute;
+    }
+    .stepcard-button {
+      top: 268px;
+      left: 286px;
+      color: #ffffff;
+      width: 84px;
+      height: 36px;
+      position: absolute;
+      text-align: left;
+      border-color: #125873;
+      background-color: #125873;
+    }
+    .stepcard-button1 {
+      top: 268px;
+      left: 192px;
+      color: #125873;
+      width: 84px;
+      height: 36px;
+      position: absolute;
+      text-align: right;
+      border-color: #125873;
+    }
+    .stepcard-html-node1 {
+      left: 206px;
+      width: 10px;
+      bottom: 32px;
+      position: absolute;
+    }
+    .stepcard-html-node2 {
+      left: 350px;
+      bottom: 34px;
+      position: absolute;
+    }
