@@ -46,16 +46,19 @@ UserRouter.post('/signup',[
       let {name,email,password,phoneNumber,gender,dob} =req.body;
       
       // let user = await User.findOne({email: email});
-      let user = realm.objectForPrimaryKey("UserSchema",phoneNumber);
+      let users = realm.objects("UserSchema");
+       console.log(`The lists of users are: ${users.map((user) => user.name)}`);
+       let filtereduser = users.filtered("name == $0" , name);
+       console.log(`The lists of users are: ${filtereduser.map((user) => user.name)}`);
       // console.log(user.name);
-      if(user) throw new Error("Error creating account")  //To check if the user already exists
+      // if(user) throw new Error("Error creating account") 
       
       const salt= await bcrypt.genSalt(Number(process.env.SALT_ROUNDS));
       const hash= await bcrypt.hash(password,salt);
       password=hash;
-        
+      let newuser ; 
     realm.write(() => {
-        user = realm.create("UserSchema", {
+        newuser = realm.create("UserSchema", {
             _id:new UUID(),
             name: name,
             gender: gender,
@@ -66,9 +69,11 @@ UserRouter.post('/signup',[
     )
     
       console.log("user saved");
+      users = realm.objects("UserSchema");
+       console.log(`The lists of users are: ${users.map((user) => user.name)}`);
 
-      const jwtToken = jwt.sign({ id: user._id, name: user.name }, process.env.JWT_ACCESS_TOKEN_SECRET);
-      res.status(201).json({msg: "Account created successfully!", user: {_id: user._id, name: user.name, email: user.email,gender:user.gender,dob:user.dob}, errors: []}) // accessToken: jwtToken,
+      const jwtToken = jwt.sign({ id: newuser._id, name: newuser.name }, process.env.JWT_ACCESS_TOKEN_SECRET);
+      res.status(201).json({msg: "Account created successfully!", user: {_id: newuser._id, name: newuser.name, email: newuser.email,gender:newuser.gender,dob:newuser.dob}, errors: []}) // accessToken: jwtToken,
     }
     catch(err){
             console.log(err);

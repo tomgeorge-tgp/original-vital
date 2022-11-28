@@ -43,7 +43,7 @@ function Bpstart(props){
           <button className="bpstart-button button"
           onClick={props.onExitClick}>Exit</button>
           <button className="bpstart-button1 button" 
-          onClick={props.onContinueClick}>
+          onClick={props.onContinueClick }>
             Start
           </button>
           <span className="bpstart-text">{props.setinitateTestPopUp}</span>

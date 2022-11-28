@@ -5,3 +5,5 @@ export const signupUrl="/user/signup";
 export const loginUrl="/user/login"; 
 
 export const fetchUserUrl="/user";
+
+export const readBpSensor="/sensor/bpsensor"

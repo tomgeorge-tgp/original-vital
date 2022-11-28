@@ -6,9 +6,9 @@ import Bp2_Pop from "../components/Bp2Pop";
 import BpStartPopUp from "../components/BpStart";
 import BloodPressureEnd from "../components/BloodPressureStop";
 import {Link,Navigate,useNavigate,useParams,useLocation} from "react-router-dom"
-
+import api from '../api';
 import CandleStickGraph from "../components/graphs/CandleStickGraph";
-
+import { readBpSensor } from '../url/url';
 // function* gen(){
 //   yield 1;
 //   yield 2;
@@ -18,9 +18,27 @@ import CandleStickGraph from "../components/graphs/CandleStickGraph";
 
 const BloodPressurepopup = (props) => {
   const [popUpSequence, setPopupSequence] = useState("BP_START");
-        if (popUpSequence === "BP_START") return(<BpStartPopUp setinitateTestPopUp={"wear device and press \"start\"."} onExitClick={props.onExitClick} onContinueClick={()=>{setPopupSequence("BP_END")}} />);
+        if (popUpSequence === "BP_START") return(<BpStartPopUp setinitateTestPopUp={"wear device and press \"start\"."} onExitClick={props.onExitClick} onContinueClick={()=>{setPopupSequence("BP_END");sensorRead();}} />);
         else if (popUpSequence === "BP_END") return (<BloodPressureEnd setinitateTestPopUp={"wear device and press \"start\"."} onExitClick={props.onExitClick} onContinueClick={props.onContinueClick}  />);
  }
+
+ function  sensorRead(){
+  const data={data:"start"};
+  api.post(
+     readBpSensor,
+     data,
+     {
+     headers: {
+       "Content-Type":"application/json",
+       "Accept": "*/*"
+     }
+   }).then(res => { 
+        console.log(res.status, res.data)
+   }    
+   ).catch(err =>  new Error(err))
+   
+ }
+ 
 
 function Bpexisting(){
 
