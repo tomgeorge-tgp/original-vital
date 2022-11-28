@@ -21,7 +21,13 @@ export default function(httpServer)
     //console.log(`User Connected: ${socket.id}`);
   
     socket.on("send_message",(data)=>{
-      console.log(data);
+      console.log(data.message);
+      if(data.message==="Start")
+      {
+        sensorRead((sensorData)=>{
+          socket.emit("bp_data",{data:sensorData})
+        });
+      }
     })
   })
     

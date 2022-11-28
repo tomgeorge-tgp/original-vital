@@ -8,7 +8,7 @@ import SensorRoutes from './Routes/SensorRoutes.js';
 import bodyParser from 'body-parser';
 import cors from "cors";
 import sensorRead from './sensors/bpSensor.js';
-import {Server} from "socket.io";
+
 import Realm from "realm";
 dotenv.config();
 

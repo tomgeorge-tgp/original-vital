@@ -3,12 +3,18 @@ var SerialPort = serialport.SerialPort;
 var portName = process.argv[7];
 import SensorSchema from '../Models/SensorSchema.js';
 //var Buffer =  require('buffer/').Buffer;
-let data;
-let value;
-export default function sensorRead () {
+
+
+
+
+
+export default function sensorRead (callback) {
+  let buffer=[];
+  console.log("here");
   const port = new SerialPort({
     path: "COM3",
     baudRate: 115200
+    
   })
 
 
@@ -24,31 +30,35 @@ export default function sensorRead () {
   });
 
   port.on('data', async function(data) {
-    console.log("data",data[2]);
-    if(data[2] == 5)
-    {
-      console.log("sys",data[5]);
-      value =  data[5];
+    console.log("data",Buffer.from(data).toString());
+    //if(data[2] == 5)
+   // {
+      buffer.push(data);
+      //console.log("sys",data.toString());
+      //value =  data[5];
 
-      const realm = await Realm.open({
-      schema: [SensorSchema],
-      path: "sensors",
-    });
+    //   const realm = await Realm.open({
+    //   schema: [SensorSchema],
+    //   path: "sensors",
+    // });
     
   
-    realm.write(() => {
-        sensor1 = realm.create("SensorSchema", {
-            _id:1234,
-            name: "bp",
-            value : value,
-      });
+    // realm.write(() => {
+    //     sensor1 = realm.create("SensorSchema", {
+    //         _id:1234,
+    //         name: "bp",
+    //         value : value,
+    //   });
         
-    });
-    }
+    // });
+    //}
      
       // for(i=0;i<data)
       // console.log("cuff pressure "+ data[5]*2 + ", sys =" + data[6] + ", dia = " + data[8] )
     });
+
+    port.on('end', () => {
+    console.log("Final Buffer data",Buffer.concat(buffer).toString())})
     
 }
 

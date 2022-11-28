@@ -4,6 +4,6 @@ import SensorRoutes from './SensorRoutes.js'
 export default function(app)
 {
     app.use('/user', UserRoutes);
-    app.use('/sensor',SensorRoutes);
+    // app.use('/sensor',SensorRoutes);
    
 };

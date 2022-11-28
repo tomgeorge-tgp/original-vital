@@ -20,7 +20,7 @@ const BloodPressurepopup = (props) => {
  }
 
  function  SensorRead(){
-   socket.emit("send_message",{message:"hello"});
+   socket.emit("send_message",{message:"Start"});
 
 
 
