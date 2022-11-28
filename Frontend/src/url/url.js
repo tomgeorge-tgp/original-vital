@@ -6,4 +6,5 @@ export const loginUrl="/user/login";
 
 export const fetchUserUrl="/user";
 
-export const readBpSensor="/sensor/bpsensor"
+export const readBpSensor="/sensor/bpsensor";
+export const fetchSensorDataUrl="/sensor/bpfetchsensor";

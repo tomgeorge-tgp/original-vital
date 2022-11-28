@@ -8,7 +8,7 @@ import BloodPressureEnd from "../components/BloodPressureStop";
 import {Link,Navigate,useNavigate,useParams,useLocation} from "react-router-dom"
 import api from '../api';
 import CandleStickGraph from "../components/graphs/CandleStickGraph";
-import { readBpSensor } from '../url/url';
+import { readBpSensor,fetchSensorDataUrl } from '../url/url';
 // function* gen(){
 //   yield 1;
 //   yield 2;
@@ -18,11 +18,12 @@ import { readBpSensor } from '../url/url';
 
 const BloodPressurepopup = (props) => {
   const [popUpSequence, setPopupSequence] = useState("BP_START");
-        if (popUpSequence === "BP_START") return(<BpStartPopUp setinitateTestPopUp={"wear device and press \"start\"."} onExitClick={props.onExitClick} onContinueClick={()=>{setPopupSequence("BP_END");sensorRead();}} />);
+        if (popUpSequence === "BP_START") return(<BpStartPopUp setinitateTestPopUp={"wear device and press \"start\"."} onExitClick={props.onExitClick} onContinueClick={()=>{setPopupSequence("BP_END");SensorRead();}} />);
         else if (popUpSequence === "BP_END") return (<BloodPressureEnd setinitateTestPopUp={"wear device and press \"start\"."} onExitClick={props.onExitClick} onContinueClick={props.onContinueClick}  />);
  }
 
- function  sensorRead(){
+ function  SensorRead(){
+  //  const [sensorData,setSensorData]=useState([1]);
   const data={data:"start"};
   api.post(
      readBpSensor,
@@ -34,10 +35,59 @@ const BloodPressurepopup = (props) => {
      }
    }).then(res => { 
         console.log(res.status, res.data)
-   }    
-   ).catch(err =>  new Error(err))
-   
+        //setSensorData([2]);
+      }    
+      ).catch(err =>  new Error(err))
+      
+      // useEffect(()=>{
+      //   setSensorData( SensorReadValue());
+      // },[])
+  
  }
+
+//  const response=await api.get(fetchSensorDataUrl,
+//     {headers: {
+//       "Content-Type":"application/json",
+//       "Accept": "*/*",
+//     }});
+//     console.table(response.data);
+//     return response.data;
+//   }catch(err)
+//   {
+//     if(err.response){
+//     console.log(err.response.data);
+//     console.log(err.response.status);
+//   }
+//   else
+//   {
+//     console.log(`Error:${err.message}`);
+//   } 
+
+
+
+//  const SensorReadValue=async()=>{
+//   try{
+//   const response=await api.get(fetchSensorDataUrl,
+//   {headers: {
+//     "Content-Type":"application/json",
+//     "Accept": "*/*",
+//   }});
+//   console.table(response.data);
+//   return response.data;
+// }catch(err)
+// {
+//   if(err.response){
+//   console.log(err.response.data);
+//   console.log(err.response.status);
+// }
+// else
+// {
+//   console.log(`Error:${err.message}`);
+// }
+
+// }
+// }
+
  
 
 function Bpexisting(){

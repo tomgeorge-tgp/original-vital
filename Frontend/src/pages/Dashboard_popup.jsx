@@ -19,13 +19,13 @@ import useLocalStorageRef from "../hooks/LocalStorage"
 
 function Dashboard(){
   const navigate = useNavigate();
-  // const location=useLocation();
+  const location=useLocation();
   const [diagnosisPage,setDiagnosisPage]=useState("");
-  // const [id, setId, removeId] = useLocalStorage("userid",)
+ // const [id, setId, removeId] = useLocalStorage("userid",)
   const [user, setUser, removeUser] = useLocalStorageRef("user")
   
   const [userData,setUserData]=useState([]);
-  console.log(user.current);
+  //console.log(user.current);
 //   const data={
 //     name:location.state.name,
 //     email:location.state.email,
@@ -69,38 +69,38 @@ function Dashboard(){
 
 
   
-  // const userDataFetch=async()=>{
-  //   try{
-  //     console.log(user.current.id);
-  //   const token=user.current.accessToken;
-  //   if(!token){
-  //      throw new Error("token not found");
+  const userDataFetch=async()=>{
+    try{
+      console.log("user",user.current.id);
+    const token=user.current.accessToken;
+    if(!token){
+       throw new Error("token not found");
        
-  //   }
-  //   const response=await api.get(fetchUserUrl+`/${user.current.id}`,
-  //   {headers: {
-  //     "Accept": "*/*",
-  //     "Authorization": `Bearer ${token}`,
-  //   }});
-  //   console.table(response.data);
-  //   setUserData(response.data);
-  // }catch(err)
-  // {
-  //   if(err.response){
-  //   //Not in the 200 response range
-  //   console.log(err.response.data);
-  //   console.log(err.response.status);
-  //   console.log(err.response.headers);
-  // }
-  // else
-  // {
-  //   console.log(`Error:${err.message}`);
-  // }
-  // navigate("/loginForm");
-  // }
-  // }
+    }
+    const response=await api.get(fetchUserUrl+`/${user.current.id}`,
+    {headers: {
+      "Accept": "*/*",
+      "Authorization": `Bearer ${token}`,
+    }});
+    console.table("data hear",response.data);
+    setUserData(response.data);
+  }catch(err)
+  {
+    if(err.response){
+    //Not in the 200 response range
+    console.log(err.response.data);
+    console.log(err.response.status);
+    console.log(err.response.headers);
+  }
+  else
+  {
+    console.log(`Error:${err.message}`);
+  }
+ navigate("/loginForm");
+  }
+  }
   useEffect(()=>{
-    // userDataFetch();
+     userDataFetch();
   },[])
 
 

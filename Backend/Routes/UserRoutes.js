@@ -7,6 +7,7 @@ import UserSchema from "../Models/User.js"
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import auth from "../Middleware/auth.js";
+import { v4 as uuidv4 } from 'uuid';
 
 
 dotenv.config();
@@ -14,7 +15,7 @@ const realm = await Realm.open({
   schema: [UserSchema],
   path: "testDatabase",
 });
-const { UUID } = Realm.BSON;
+//const { UUID } = Realm.BSON;
 
 //signup page post routes
 UserRouter.post('/signup',[
@@ -59,7 +60,7 @@ UserRouter.post('/signup',[
       let newuser ; 
     realm.write(() => {
         newuser = realm.create("UserSchema", {
-            _id:new UUID(),
+            _id:uuidv4(),
             name: name,
             gender: gender,
             email: email,
@@ -70,10 +71,18 @@ UserRouter.post('/signup',[
     
       console.log("user saved");
       users = realm.objects("UserSchema");
-       console.log(`The lists of users are: ${users.map((user) => user.name)}`);
+       console.log(`The lists of users are: ${users.map((user) => user._id)}`);
+       const userData={
+        _id:filtereduser.map((user) => user._id).pop(), 
+       name:filtereduser.map((user) => user.name).pop(),
+       gender:filtereduser.map((user) => user.gender).pop(),
+       email: filtereduser.map((user) => user.email).pop(),
+       password: filtereduser.map((user) => user.password).pop(),
+       phoneNumber: filtereduser.map((user) => user.phoneNumber).pop(),
+      }
 
-      const jwtToken = jwt.sign({ id: newuser._id, name: newuser.name }, process.env.JWT_ACCESS_TOKEN_SECRET);
-      res.status(201).json({msg: "Account created successfully!", user: {_id: newuser._id, name: newuser.name, email: newuser.email,gender:newuser.gender,dob:newuser.dob}, errors: []}) // accessToken: jwtToken,
+      const jwtToken = jwt.sign({ id: userData._id, name: userData.name }, process.env.JWT_ACCESS_TOKEN_SECRET);
+      res.status(201).json({msg: "Account created successfully!", user: {_id: userData._id, name: userData.name, email: userData.email,gender:userData.gender,dob:userData.dob}, errors: []}) // accessToken: jwtToken,
     }
     catch(err){
             console.log(err);
@@ -101,8 +110,8 @@ UserRouter.post('/login',[
   try
   {
   console.log(req.body);
-  // res.header("Access-Control-Allow-Origin", "*");
-  const errors = validationResult(req);
+  res.header("Access-Control-Allow-Origin", "*");
+ const errors = validationResult(req);
   
   if(!errors.isEmpty())
   {
@@ -112,19 +121,33 @@ UserRouter.post('/login',[
   
   // const {name, phoneNumber, password} = req.body;
   const {phoneNumber, password} = req.body;
-  let user = realm.objectForPrimaryKey("UserSchema",phoneNumber);
+  let users = realm.objects("UserSchema");
+       console.log(`The lists of users are: ${users.map((user) => user.name)}`);
+       let filtereduser = users.filtered("phoneNumber == $0" , phoneNumber);
+       console.log(`The lists of users are: ${filtereduser.map((user) => user.name)}`);
   //let user = await User.findOne({phoneNumber: phoneNumber});
-  if(user==null)
+  if(!filtereduser)
   {
     throw new Error("Invalid login details!");
   }
+ const userData={
+   _id:filtereduser.map((user) => user._id).pop(), 
+  name:filtereduser.map((user) => user.name).pop(),
+  gender:filtereduser.map((user) => user.gender).pop(),
+  email: filtereduser.map((user) => user.email).pop(),
+  password: filtereduser.map((user) => user.password).pop(),
+  phoneNumber: filtereduser.map((user) => user.phoneNumber).pop(),
+ }
 
   
-    if(await bcrypt.compare(password, user.password))
+  console.log(`${filtereduser.map((user) => user.name)}`);
+   console.log(userData);
+  
+    if(await bcrypt.compare(password, userData.password))
     {
-      console.log("User loggged in: ", user._id, " ", new Date().toISOString());
-      const jwtToken = jwt.sign({ id: user._id, name: user.name }, process.env.JWT_ACCESS_TOKEN_SECRET);
-      res.status(201).json({msg: "Logged in successfully!", accessToken: jwtToken, user: {_id: user._id,name: user.name, email: user.email,gender:user.gender,dob:user.dob}, errors: []}) 
+      console.log("User loggged in: ", userData._id, " ", new Date().toISOString());
+      const jwtToken = jwt.sign({ id: userData._id, name: userData.name }, process.env.JWT_ACCESS_TOKEN_SECRET);
+      res.status(201).json({msg: "Logged in successfully!", accessToken: jwtToken, user: {_id: userData._id,name: userData.name, email: userData.email,gender:userData.gender,dob:userData.dob}, errors: []}) 
     }
     else
     {
@@ -141,22 +164,26 @@ UserRouter.post('/login',[
 UserRouter.get('/:id',auth,async(req, res) => {
  try{ 
   const userId=req.params.id;
-  let user = await User.findById(userId);
+  let users = realm.objects("UserSchema");
+  console.log(`The lists of users are: ${users.map((user) => user.name)}`);
+  let filtereduser = users.filtered("_id == $0" , userId);
+  console.log(`The lists of users are: ${filtereduser.map((user) => user.name)}`);
 
-  console.log(user);
+  
 
 
-  if(!user)
+  if(!filtereduser)
   {
     throw new Error("User not found!");
   }
   else{
     const userData={
-      name: user.name,
-      email: user.email,
-      phoneNumber: user.phoneNumber,
-      dob: user.dob,
-      gender: user.gender,
+      _id:filtereduser.map((user) => user._id).pop(), 
+      name:filtereduser.map((user) => user.name).pop(),
+      gender:filtereduser.map((user) => user.gender).pop(),
+      email: filtereduser.map((user) => user.email).pop(),
+      password: filtereduser.map((user) => user.password).pop(),
+      phoneNumber: filtereduser.map((user) => user.phoneNumber).pop(),
     }
     return res.status(200).json(userData);
       

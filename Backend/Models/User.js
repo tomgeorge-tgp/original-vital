@@ -5,7 +5,7 @@ import Realm from "realm";
 const TaskSchema = {
   name: "UserSchema",
   properties: {
-    _id: "uuid",
+    _id: "string",
     name: "string",
     gender: "string",
     email: "string",

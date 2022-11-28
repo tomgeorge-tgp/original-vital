@@ -18,6 +18,7 @@ function PhoneNumber(){
     
     e.preventDefault();
     const data={
+         
          name:location.state.name,
          email:location.state.email,
          password:location.state.password,
