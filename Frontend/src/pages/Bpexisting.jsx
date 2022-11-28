@@ -9,12 +9,9 @@ import {Link,Navigate,useNavigate,useParams,useLocation} from "react-router-dom"
 import api from '../api';
 import CandleStickGraph from "../components/graphs/CandleStickGraph";
 import { readBpSensor,fetchSensorDataUrl } from '../url/url';
-// function* gen(){
-//   yield 1;
-//   yield 2;
-//   yield 3;
-//   yield 4;
-// }
+import io from 'socket.io-client';
+const socket=io.connect("http://localhost:5000");
+
 
 const BloodPressurepopup = (props) => {
   const [popUpSequence, setPopupSequence] = useState("BP_START");
@@ -23,21 +20,25 @@ const BloodPressurepopup = (props) => {
  }
 
  function  SensorRead(){
+   socket.emit("send_message",{message:"hello"});
+
+
+
   //  const [sensorData,setSensorData]=useState([1]);
-  const data={data:"start"};
-  api.post(
-     readBpSensor,
-     data,
-     {
-     headers: {
-       "Content-Type":"application/json",
-       "Accept": "*/*"
-     }
-   }).then(res => { 
-        console.log(res.status, res.data)
-        //setSensorData([2]);
-      }    
-      ).catch(err =>  new Error(err))
+  //const data={data:"start"};
+  // api.post(
+  //    readBpSensor,
+  //    data,
+  //    {
+  //    headers: {
+  //      "Content-Type":"application/json",
+  //      "Accept": "*/*"
+  //    }
+  //  }).then(res => { 
+  //       console.log(res.status, res.data)
+  //       //setSensorData([2]);
+  //     }    
+  //     ).catch(err =>  new Error(err))
       
       // useEffect(()=>{
       //   setSensorData( SensorReadValue());

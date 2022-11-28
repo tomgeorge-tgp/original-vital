@@ -4,10 +4,11 @@ import UserSchema from "./Models/User.js";
 import http from 'http';
 import dotenv from 'dotenv';
 import useAppRoutes from './Routes/appRoutes.js';
+import SensorRoutes from './Routes/SensorRoutes.js';
 import bodyParser from 'body-parser';
 import cors from "cors";
 import sensorRead from './sensors/bpSensor.js';
-
+import {Server} from "socket.io";
 import Realm from "realm";
 dotenv.config();
 
@@ -85,6 +86,14 @@ app.use(express.json());
 
 useAppRoutes(app);
 
-
 const httpServer = http.createServer(app);
+
+SensorRoutes(httpServer);
+
+
+
+
+
+
+
 httpServer.listen(5000,()=>{console.log("Server started on port 5000")});
