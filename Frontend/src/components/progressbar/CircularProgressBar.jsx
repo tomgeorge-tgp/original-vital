@@ -9,20 +9,27 @@ function CircularProgressBar(props)
 {
     const percentage = 40;
     
-    console.log("propvalue",props.data)
+    console.log("propvalue",props.data);
+    let sdata = props.data;
+    let values = [0];
+    if(sdata.state === "continue")
+    {
+      values.push(sdata.dia);
+       values.shift();
+    }
   return(
     <>
-     <ChangingProgressProvider  values={[0,10,30,100]}>
+     <ChangingProgressProvider  values={values}>
 {percentage => (
   <CircularProgressbar
   
-    value={percentage}
-    text={`${percentage}%`}
+    value={percentage*100/200}
+    text={`${percentage}`}
     styles={
         buildStyles({
     //   pathColor: `rgba(62, 152, 199, ${percentage / 100})`,
     pathColor: `rgba(26, 181, 143, 1)`,
-      pathTransitionDuration: 0.15
+      pathTransitionDuration: .10
     })}
   />
 )}

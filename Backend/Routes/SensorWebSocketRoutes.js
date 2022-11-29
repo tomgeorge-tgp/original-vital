@@ -28,6 +28,12 @@ export default function(httpServer)
           socket.emit("bp_data",{data:sensorData})
         });
       }
+      if(data.message==="Stop")
+      {
+        sensorRead("stop");
+          
+        
+      }
     })
   })
     
