@@ -4,7 +4,7 @@ import UserSchema from "./Models/User.js";
 import http from 'http';
 import dotenv from 'dotenv';
 import useAppRoutes from './Routes/appRoutes.js';
-import SensorRoutes from './Routes/SensorRoutes.js';
+import SensorRoutes from './Routes/SensorWebSocketRoutes.js';
 import bodyParser from 'body-parser';
 import cors from "cors";
 import sensorRead from './sensors/bpSensor.js';

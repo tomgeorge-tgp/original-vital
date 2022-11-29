@@ -8,6 +8,7 @@ const SensorSchema = {
     _idUser:"uuid",
     type : "string",
     value: "int",
+    
   },
   primaryKey: "_id",
 };

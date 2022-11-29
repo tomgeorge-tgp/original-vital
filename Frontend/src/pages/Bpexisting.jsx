@@ -26,6 +26,11 @@ const BloodPressurepopup = (props) => {
     socket.on("bp_data",(data)=>{
       console.log("data: " , data.data);
       callback(data.data);
+
+      if(data.data==="end")
+      {
+        
+      }
     })
 
   

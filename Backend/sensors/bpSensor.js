@@ -31,17 +31,19 @@ export default function sensorRead (callback) {
   });
 
   port.on('data', async function(data) {
-    //console.log("data",Buffer.from(data,'base64').toString());
-    //console.log("data",data.toString("hex"));
+    console.log("data",Buffer.from(data,'base64').toString());
+    console.log("data",data.toString("hex"));
     // const readings={
     //   sis:parseInt(data[4],16),
     //   dia:parseInt(data[5],16),
-    //   hrate:parseInt(data[6],16)
+    //   hrate:parseInt(data[6],16),
+    //   state:parseInt(data[2],16)===5 ? "end" :parseInt(data[7],16)===2 ? "start" : "continue";
     // }
      const readings={
       sis:100,
       dia:20,
-      hrate:30
+      hrate:30,
+      state:"end"
     }
     
     console.log("data",readings);
