@@ -1,3 +1,4 @@
+import { isObjectIdOrHexString } from 'mongoose';
 import serialport from 'serialport';
 var SerialPort = serialport.SerialPort;
 var portName = process.argv[7];
@@ -12,7 +13,7 @@ export default function sensorRead (callback) {
   let buffer=[];
   console.log("here");
   const port = new SerialPort({
-    path: "COM3",
+    path: "COM4",
     baudRate: 115200
     
   })
@@ -30,18 +31,30 @@ export default function sensorRead (callback) {
   });
 
   port.on('data', async function(data) {
-    console.log("data",Buffer.from(data).toString());
-    //if(data[2] == 5)
-   // {
-      buffer.push(data);
-      //console.log("sys",data.toString());
-      //value =  data[5];
-
-    //   const realm = await Realm.open({
-    //   schema: [SensorSchema],
-    //   path: "sensors",
-    // });
+    //console.log("data",Buffer.from(data,'base64').toString());
+    //console.log("data",data.toString("hex"));
+    // const readings={
+    //   sis:parseInt(data[4],16),
+    //   dia:parseInt(data[5],16),
+    //   hrate:parseInt(data[6],16)
+    // }
+     const readings={
+      sis:100,
+      dia:20,
+      hrate:30
+    }
     
+    console.log("data",readings);
+    
+    callback(readings);
+    
+    const statusCode=parseInt(data[2],16);
+
+    if(data[2] == 5)
+   {
+      buffer.push(data);
+      
+      port.emit("end")
   
     // realm.write(() => {
     //     sensor1 = realm.create("SensorSchema", {
@@ -55,10 +68,11 @@ export default function sensorRead (callback) {
      
       // for(i=0;i<data)
       // console.log("cuff pressure "+ data[5]*2 + ", sys =" + data[6] + ", dia = " + data[8] )
-    });
+      
+    }
 
     port.on('end', () => {
     console.log("Final Buffer data",Buffer.concat(buffer).toString())})
-    
+    }  )
 }
 

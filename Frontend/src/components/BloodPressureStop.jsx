@@ -6,7 +6,7 @@ import CircularProgressBar from './progressbar/CircularProgressBar';
 
 function BloodPressureStop(props){
     
-
+console.log("props here",props.data);
 
   return (
     <>
@@ -23,7 +23,7 @@ function BloodPressureStop(props){
           <button className="bp-stop-button button">Stop</button>
           <div className="bp-stop-container2">
           <div >
-         <CircularProgressBar value={40} />
+         <CircularProgressBar data={props.data} value={40} />
       </div>
             <span className="bp-stop-text">
               <span>mmHg</span>

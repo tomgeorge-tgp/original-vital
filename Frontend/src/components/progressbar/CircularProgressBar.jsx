@@ -9,10 +9,10 @@ function CircularProgressBar(props)
 {
     const percentage = 40;
     
-    
+    console.log("propvalue",props.data)
   return(
     <>
-     <ChangingProgressProvider  values={[0,10,100]}>
+     <ChangingProgressProvider  values={[0,10,30,100]}>
 {percentage => (
   <CircularProgressbar
   

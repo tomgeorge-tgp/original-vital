@@ -14,80 +14,27 @@ const socket=io.connect("http://localhost:5000");
 
 
 const BloodPressurepopup = (props) => {
+  const [bpData,setBpData]=useState([]);
   const [popUpSequence, setPopupSequence] = useState("BP_START");
-        if (popUpSequence === "BP_START") return(<BpStartPopUp setinitateTestPopUp={"wear device and press \"start\"."} onExitClick={props.onExitClick} onContinueClick={()=>{setPopupSequence("BP_END");SensorRead();}} />);
-        else if (popUpSequence === "BP_END") return (<BloodPressureEnd setinitateTestPopUp={"wear device and press \"start\"."} onExitClick={props.onExitClick} onContinueClick={props.onContinueClick}  />);
+        if (popUpSequence === "BP_START") return(<BpStartPopUp setinitateTestPopUp={"wear device and press \"start\"."} onExitClick={props.onExitClick} onContinueClick={()=>{setPopupSequence("BP_END");SensorRead((data)=>{setBpData(data); console.log("bpData",bpData)});}} />);
+        else if (popUpSequence === "BP_END") return (<BloodPressureEnd setinitateTestPopUp={"wear device and press \"start\"."} data={bpData} onExitClick={props.onExitClick} onContinueClick={props.onContinueClick}  />);
  }
 
- function  SensorRead(){
+ function  SensorRead(callback){
    socket.emit("send_message",{message:"Start"});
+   
+    socket.on("bp_data",(data)=>{
+      console.log("data: " , data.data);
+      callback(data.data);
+    })
 
-
-
-  //  const [sensorData,setSensorData]=useState([1]);
-  //const data={data:"start"};
-  // api.post(
-  //    readBpSensor,
-  //    data,
-  //    {
-  //    headers: {
-  //      "Content-Type":"application/json",
-  //      "Accept": "*/*"
-  //    }
-  //  }).then(res => { 
-  //       console.log(res.status, res.data)
-  //       //setSensorData([2]);
-  //     }    
-  //     ).catch(err =>  new Error(err))
-      
-      // useEffect(()=>{
-      //   setSensorData( SensorReadValue());
-      // },[])
   
  }
 
-//  const response=await api.get(fetchSensorDataUrl,
-//     {headers: {
-//       "Content-Type":"application/json",
-//       "Accept": "*/*",
-//     }});
-//     console.table(response.data);
-//     return response.data;
-//   }catch(err)
-//   {
-//     if(err.response){
-//     console.log(err.response.data);
-//     console.log(err.response.status);
-//   }
-//   else
-//   {
-//     console.log(`Error:${err.message}`);
-//   } 
 
 
 
-//  const SensorReadValue=async()=>{
-//   try{
-//   const response=await api.get(fetchSensorDataUrl,
-//   {headers: {
-//     "Content-Type":"application/json",
-//     "Accept": "*/*",
-//   }});
-//   console.table(response.data);
-//   return response.data;
-// }catch(err)
-// {
-//   if(err.response){
-//   console.log(err.response.data);
-//   console.log(err.response.status);
-// }
-// else
-// {
-//   console.log(`Error:${err.message}`);
-// }
 
-// }
-// }
 
  
 
