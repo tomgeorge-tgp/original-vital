@@ -17,7 +17,7 @@ const BloodPressurepopup = (props) => {
   const [bpData,setBpData]=useState([]);
   const [popUpSequence, setPopupSequence] = useState("BP_START");
         if (popUpSequence === "BP_START") return(<BpStartPopUp setinitateTestPopUp={"wear device and press \"start\"."} onExitClick={props.onExitClick} onContinueClick={()=>{setPopupSequence("BP_END");SensorRead((data)=>{setBpData(data); console.log("bpData",bpData)});}} />);
-        else if (popUpSequence === "BP_END") return (<BloodPressureEnd setinitateTestPopUp={"wear device and press \"start\"."} data={bpData} onStopClick={()=>{setPopupSequence("BP_START"); SensorRead("Stop");}} onExitClick={props.onExitClick} onContinueClick={props.onContinueClick}  />);
+        else if (popUpSequence === "BP_END") return (<BloodPressureEnd setinitateTestPopUp={"wear device and press \"start\"."} data={bpData} onStopClick={()=>{setPopupSequence("BP_START");}} onExitClick={props.onExitClick} onContinueClick={props.onContinueClick}  />);
  }
 
  function  SensorRead(callback){
@@ -31,10 +31,10 @@ const BloodPressurepopup = (props) => {
       console.log("data: " , data.data);
       callback(data.data);
 
-      if(data.state==="end")
-      {
+      // if(data.state==="end")
+      // {
         
-      }
+      // }
     })
 
   
