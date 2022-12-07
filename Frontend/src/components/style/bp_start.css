@@ -1,0 +1,85 @@
+.bpstart-container {
+  width: 64rem;
+  position:absolute;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:rgba(0, 0, 0, 0.354);
+  z-index: 200;
+  }
+  .bpstart-container1 {
+    flex: 0 0 auto;
+    width: 942.88px;
+    height: 428px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 16px;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .bpstart-html-node {
+    top: 70.54px;
+    left: 113px;
+    position: absolute;
+  }
+  .bpstart-html-node1 {
+    top: 70.54px;
+    left: -Infinitypx;
+    position: absolute;
+  }
+  .bpstart-html-node2 {
+    top: 70.54px;
+    left: 582.63px;
+    right: 109px;
+    position: absolute;
+  }
+  .bpstart-html-node3 {
+    top: 26.83px;
+    left: 35.77px;
+    position: absolute;
+  }
+  .bpstart-button {
+    top: 342px;
+    left: 810px;
+    color: #f15151;
+    right: 40px;
+    width: 100.93px;
+    bottom: 46px;
+    height: 54px;
+    display: flex;
+    position: absolute;
+    box-shadow: 0px 10px 20px 0px rgba(241, 81, 81, 0.16);
+    text-align: center;
+    align-items: center;
+    border-color: #f15151;
+    border-width: 1px;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .bpstart-button1 {
+    top: 342px;
+    left: 391px;
+    color: #ffffff;
+    width: 160px;
+    bottom: 46px;
+    height: 54px;
+    display: flex;
+    position: absolute;
+    box-shadow: 0px 10px 20px 0px rgba(36, 99, 14, 0.16);
+    text-align: center;
+    align-items: center;
+    border-width: 0px;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #1ab58f;
+  }
+  .bpstart-text {
+    top: 296px;
+    left: 350px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+  }

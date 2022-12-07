@@ -1,0 +1,10 @@
+.popup__button{
+    width: 160px;
+    height: 48px;
+    background-color: #DA5555;
+    box-shadow: 0px 10px 20px rgba(36, 99, 14, 0.16);
+    border-radius: 10px;
+    color: white;
+    margin: 1rem auto 0;
+    border: none;
+}

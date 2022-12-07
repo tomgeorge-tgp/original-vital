@@ -1,0 +1,275 @@
+.h-f-readingsscreen-container {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* width: 64rem; */
+  position:absolute;
+  justify-content: center;
+  background-color:rgba(0, 0, 0, 0.354);
+  z-index: 200;
+  }
+  .h-f-readingsscreen-container1 {
+    flex: 0 0 auto;
+    width: 942.88px;
+    height: 428px;
+    display: flex;
+    position: relative;
+    align-self: center;
+    align-items: center;
+    border-radius: 16px;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .h-f-readingsscreen-button {
+    left: 218px;
+    color: #1ab58f;
+    width: 240px;
+    bottom: 29px;
+    height: 54px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    font-size: 16px;
+    box-shadow: 0px 10px 20px 0px rgba(36, 99, 14, 0.16);
+    font-style: normal;
+    text-align: center;
+    align-items: center;
+    font-weight: 700;
+    border-width: 0px;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .h-f-readingsscreen-button1 {
+    color: #ffffff;
+    right: 224.875px;
+    width: 240px;
+    bottom: 29px;
+    height: 54px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    font-size: 16px;
+    box-shadow: 0px 10px 20px 0px rgba(36, 99, 14, 0.16);
+    font-style: normal;
+    text-align: center;
+    align-items: center;
+    font-weight: 700;
+    border-width: 0px;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #1ab58f;
+  }
+  .h-f-readingsscreen-audio-button {
+    top: 24px;
+    flex: 0 0 auto;
+    left: 24px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    position: absolute;
+    box-shadow: 0px 10px 20px 0px rgba(5, 60, 82, 0.2);
+    align-items: center;
+    border-width: 0px;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .h-f-readingsscreen-container2 {
+    flex: 0 0 auto;
+    width: 800px;
+    height: 230px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    border-radius: 10px;
+    justify-content: flex-end;
+    background-color: #f4fbf9;
+  }
+  .h-f-readingsscreen-oxygen-saturation {
+    top: 48px;
+    left: 56px;
+    width: 74.4609375px;
+    height: 101.796875px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .h-f-readingsscreen-sp-o2 {
+    top: 0px;
+    left: 0px;
+    color: #727272;
+    position: absolute;
+  }
+  .h-f-readingsscreen-sp-o2-value {
+    top: 16px;
+    left: 0px;
+    color: #1ab58f;
+    position: absolute;
+    font-size: 60px;
+  }
+  .h-f-readingsscreen-sp-o2-unit {
+    left: 0px;
+    color: #1ab58f;
+    bottom: 0px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .h-f-readingsscreen-heart-rate {
+    top: 48px;
+    left: 194px;
+    width: 74.4609375px;
+    height: 101.796875px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .h-f-readingsscreen-h-r {
+    top: 0px;
+    left: 0px;
+    color: #727272;
+    position: absolute;
+  }
+  .h-f-readingsscreen-h-r-value {
+    top: 16px;
+    left: 0px;
+    color: #1ab58f;
+    position: absolute;
+    font-size: 60px;
+  }
+  .h-f-readingsscreen-h-r-unit {
+    left: 0px;
+    color: #1ab58f;
+    bottom: 0px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .h-f-readingsscreen-b-p-systolic {
+    top: 48px;
+    left: 331px;
+    width: 74.4609375px;
+    height: 101.796875px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .h-f-readingsscreen-b-p {
+    top: -10px;
+    left: 0px;
+    color: #727272;
+    position: absolute;
+  }
+  .h-f-readingsscreen-b-p-value {
+    top: 20px;
+    left: 0px;
+    color: #1ab58f;
+    position: absolute;
+    font-size: 60px;
+  }
+  .h-f-readingsscreen-b-p-unit {
+    left: 0px;
+    color: #1ab58f;
+    bottom: 0px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .h-f-readingsscreen-b-p-diastolic {
+    top: 48px;
+    left: 487px;
+    width: 74.4609375px;
+    height: 101.796875px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .h-f-readingsscreen-b-p1 {
+    top: -10px;
+    left: 0px;
+    color: #727272;
+    position: absolute;
+  }
+  .h-f-readingsscreen-b-p-value1 {
+    top: 20px;
+    left: 0px;
+    color: #1ab58f;
+    position: absolute;
+    font-size: 60px;
+  }
+  .h-f-readingsscreen-b-p-unit1 {
+    left: 0px;
+    color: #1ab58f;
+    bottom: 0px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .h-f-readingsscreen-body-temperature {
+    top: 48px;
+    right: 88px;
+    width: 74.4609375px;
+    height: 101.796875px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .h-f-readingsscreen-b-t {
+    top: 0px;
+    left: 0px;
+    color: #727272;
+    width: 120px;
+    position: absolute;
+  }
+  .h-f-readingsscreen-b-t-value {
+    top: 16px;
+    left: 0px;
+    color: #1ab58f;
+    position: absolute;
+    font-size: 60px;
+  }
+  .h-f-readingsscreen-b-t-unit {
+    left: 0px;
+    color: #1ab58f;
+    bottom: 0px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .h-f-readingsscreen-share-button {
+    top: 9px;
+    flex: 0 0 auto;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    border-width: 0px;
+    justify-content: flex-start;
+    background-color: transparent;
+  }
+  .h-f-readingsscreen-div1 {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+  }
+  .h-f-readingsscreen-text {
+    top: 32px;
+    left: 352px;
+    color: #1ab58f;
+    position: absolute;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+  }

@@ -1,0 +1,83 @@
+.bginstruction-container {
+  width: 64rem;
+  position:absolute;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:rgba(0, 0, 0, 0.354);
+  z-index: 200;
+  }
+  .bginstruction-container1 {
+    flex: 0 0 auto;
+    width: 942.88px;
+    height: 428px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 16px;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .bginstruction-html-node {
+    top: 26.83px;
+    left: 35.77px;
+    position: absolute;
+  }
+  .bginstruction-button {
+    top: 342px;
+    left: 810px;
+    color: #f15151;
+    right: 40px;
+    width: 100.93px;
+    bottom: 46px;
+    height: 54px;
+    display: flex;
+    position: absolute;
+    box-shadow: 0px 10px 20px 0px rgba(241, 81, 81, 0.16);
+    text-align: center;
+    align-items: center;
+    border-color: #f15151;
+    border-width: 1px;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .bginstruction-button1 {
+    top: 342px;
+    left: 391px;
+    color: #ffffff;
+    width: 160px;
+    bottom: 46px;
+    height: 54px;
+    display: flex;
+    position: absolute;
+    box-shadow: 0px 10px 20px 0px rgba(36, 99, 14, 0.16);
+    text-align: center;
+    align-items: center;
+    border-width: 0px;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #1ab58f;
+  }
+  .bginstruction-text {
+    top: 161px;
+    left: 237px;
+    width: 366px;
+    height: 148px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .bginstruction-text10 {
+    top: 108px;
+    left: 237px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .bginstruction-html-node1 {
+    top: 53px;
+    left: 649px;
+    position: absolute;
+  }

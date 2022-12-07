@@ -1,0 +1,159 @@
+.login1-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .login1-container1 {
+    top: 0px;
+    flex: 0 0 auto;
+    left: 0px;
+    right: 0px;
+    width: 1024px;
+    bottom: 0px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .login1-container2 {
+    top: 234px;
+    flex: 0 0 auto;
+    left: 360px;
+    width: 145px;
+    height: 101px;
+    display: flex;
+    position: absolute;
+    box-shadow: 5px 5px 10px 0px #d4d4d4;
+    align-items: flex-start;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+  }
+  .login1-container3 {
+    top: 234px;
+    flex: 0 0 auto;
+    left: 521px;
+    width: 145px;
+    height: 101px;
+    display: flex;
+    position: absolute;
+    box-shadow: 5px 5px 10px 0px #d4d4d4;
+    align-items: flex-start;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+  }
+  .login1-text {
+    top: 123px;
+    left: 310px;
+    color: #125873;
+    position: absolute;
+    font-size: 36px;
+    font-style: normal;
+    font-family: Manrope;
+    font-weight: 600;
+  }
+  .login1-html-node {
+    top: 248px;
+    left: 410px;
+    position: absolute;
+  }
+  .login1-text1 {
+    top: 300px;
+    left: 378px;
+    color: #125873;
+    position: absolute;
+    font-size: 14px;
+    font-style: normal;
+    font-family: Manrope;
+    font-weight: 600;
+  }
+  .login1-text1-button
+  {
+    border: none;
+    color:  #125873 ;
+    font-size: 14px;
+    font-style: normal;
+    font-family: Manrope;
+    font-weight: 600;
+  }
+
+
+  .login1-text2 {
+    top: 300px;
+    left: 530px;
+    color: #125873;
+    position: absolute;
+    font-size: 14px;
+    font-style: normal;
+    font-family: Manrope;
+    font-weight: 600;
+  }
+  .login1-text2-button
+  {
+    border: none;
+    font-size: 14px;
+    font-style: normal;
+    font-family: Manrope;
+    font-weight: 600;
+    color: #125873;
+
+  }
+  .login1-html-node1 {
+    top: 248px;
+    left: 569px;
+    position: absolute;
+  }
+  .login1-navlink {
+    top: 451px;
+    left: 0px;
+    color: rgb(255, 255, 255);
+    right: 0px;
+    width: 245px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    font-size: 14px;
+    font-style: normal;
+    text-align: center;
+    align-items: center;
+    font-family: Manrope;
+    font-weight: 600;
+    border-width: 0px;
+    border-radius: 10px;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #125873;
+  }
+  .login1-button {
+    top: 497px;
+    left: 389px;
+    color: rgb(18, 88, 115);
+    width: 245px;
+    bottom: 29px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    font-size: 14px;
+    font-style: normal;
+    text-align: center;
+    align-items: center;
+    font-family: Manrope;
+    font-weight: 600;
+    border-color: #125873;
+    border-width: 1px;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+  }

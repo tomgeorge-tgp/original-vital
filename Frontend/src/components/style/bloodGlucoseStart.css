@@ -1,0 +1,163 @@
+.bgstart-container {
+  width: 64rem;
+  position:absolute;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:rgba(0, 0, 0, 0.354);
+  z-index: 200;
+  }
+  .bgstart-container1 {
+    flex: 0 0 auto;
+    width: 942.88px;
+    height: 428px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 16px;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .bgstart-html-node {
+    top: 26.83px;
+    left: 35.77px;
+    position: absolute;
+  }
+  .bgstart-button {
+    top: 342px;
+    left: 810px;
+    color: #f15151;
+    right: 40px;
+    width: 100.93px;
+    bottom: 46px;
+    height: 54px;
+    display: flex;
+    position: absolute;
+    box-shadow: 0px 10px 20px 0px rgba(241, 81, 81, 0.16);
+    text-align: center;
+    align-items: center;
+    border-color: #f15151;
+    border-width: 1px;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .bgstart-button1 {
+    top: 342px;
+    left: 391px;
+    color: #ffffff;
+    width: 160px;
+    bottom: 46px;
+    height: 54px;
+    display: flex;
+    position: absolute;
+    box-shadow: 0px 10px 20px 0px rgba(36, 99, 14, 0.16);
+    text-align: center;
+    align-items: center;
+    border-width: 0px;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #1ab58f;
+  }
+  .bgstart-text {
+    top: 105px;
+    left: 327px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .bgstart-container2 {
+    top: 158px;
+    flex: 0 0 auto;
+    left: 558px;
+    width: 157px;
+    height: 56px;
+    display: flex;
+    position: absolute;
+    box-shadow: 0px 10px 20px 0px rgba(20, 45, 54, 0.16);
+    align-items: flex-start;
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #fafdff;
+  }
+  .bgstart-radiobutton {
+    top: 20px;
+    left: 12px;
+    width: 20px;
+    position: absolute;
+  }
+  .bgstart-text01 {
+    top: 15px;
+    right: 19px;
+    width: 100px;
+    height: 19px;
+    margin: auto;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .bgstart-container3 {
+    top: 158px;
+    flex: 0 0 auto;
+    left: 382px;
+    width: 157px;
+    height: 56px;
+    display: flex;
+    position: absolute;
+    box-shadow: 0px 10px 20px 0px rgba(20, 45, 54, 0.16);
+    align-items: flex-start;
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #fafdff;
+  }
+  .bgstart-radiobutton1 {
+    top: 20px;
+    left: 12px;
+    width: 20px;
+    position: absolute;
+  }
+  .bgstart-text05 {
+    top: 15px;
+    right: 19px;
+    width: 100px;
+    height: 19px;
+    margin: auto;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .bgstart-container4 {
+    top: 158px;
+    flex: 0 0 auto;
+    left: 202px;
+    right: 393px;
+    width: 157px;
+    height: 56px;
+    display: flex;
+    position: absolute;
+    box-shadow: 0px 10px 20px 0px rgba(20, 45, 54, 0.16);
+    align-items: flex-start;
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #fafdff;
+  }
+  .bgstart-radiobutton2 {
+    top: 20px;
+    left: 12px;
+    width: 20px;
+    position: absolute;
+  }
+  .bgstart-text09 {
+    top: 15px;
+    right: 19px;
+    width: 100px;
+    height: 19px;
+    margin: auto;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+  }

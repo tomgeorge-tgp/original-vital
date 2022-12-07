@@ -1,0 +1,98 @@
+.bd-stop-container {
+  width: 64rem;
+  position:absolute;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:rgba(0, 0, 0, 0.354);
+  z-index: 200;
+  }
+  .bd-stop-container1 {
+    top: 0px;
+    flex: 0 0 auto;
+    left: 0px;
+    right: 0px;
+    width: 942.88px;
+    bottom: 0px;
+    height: 428px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-radius: 16px;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .bd-stop-html-node {
+    top: 26.83px;
+    left: 35.77px;
+    position: absolute;
+  }
+  .temp__division__bar{
+    position: absolute;
+    top:-18px;
+    /* left: 0px; */
+    left:80px;
+    right:0px;
+  }
+  .bd-stop-button {
+    top: 342px;
+    left: 391px;
+    color: #ffffff;
+    width: 160px;
+    bottom: 46px;
+    height: 54px;
+    display: flex;
+    position: absolute;
+    box-shadow: 5px 5px 20px 0px rgba(218, 85, 85, 0.16);
+    text-align: center;
+    align-items: center;
+    border-width: 0px;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #da5555;
+  }
+  .bd-stop-container2 {
+    top: 105px;
+    flex: 0 0 auto;
+    left: 389px;
+    right: 389px;
+    width: 165px;
+    height: 165px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #1ab58f;
+    border-width: 5px;
+    border-radius: 50%;
+    justify-content: center;
+  }
+  .bd-stop-text {
+    top: 0px;
+    color: rgb(26, 181, 143);
+    right: 23px;
+    width: 47px;
+    bottom: 0px;
+    height: 20px;
+    margin: auto;
+    position: absolute;
+    font-size: 10px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+  }
+  .bd-stop-text3 {
+    top: 0px;
+    left: 0px;
+    color: #1ab58f;
+    right: 0px;
+    width: 45px;
+    bottom: 0px;
+    height: 49px;
+    margin: auto;
+    position: absolute;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+  }
